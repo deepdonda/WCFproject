@@ -1,0 +1,35 @@
+﻿@model SOCProject1.ArtsService.Art
+
+<div>
+    <h4>Art</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt style="padding:1em">
+            @Html.DisplayNameFor(model => model.authorname)
+        </dt>
+
+        <dd style="padding:1em">
+            @Html.DisplayFor(model => model.authorname)
+        </dd>
+
+        <dt style="padding:1em">
+            @Html.DisplayNameFor(model => model.title)
+        </dt>
+
+        <dd style="padding:1em">
+            @Html.DisplayFor(model => model.title)
+        </dd>
+
+        <dt style="padding:1em">
+            @Html.DisplayNameFor(model => model.content)
+        </dt>
+
+        <dd style="padding:1em">
+            <pre>@Html.DisplayFor(model => model.content)</pre>
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditArt", Model) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

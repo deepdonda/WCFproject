@@ -1,0 +1,25 @@
+﻿@model IEnumerable<SOCProject1.ArtsService.Art>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="container">
+    <div class="card">
+        @foreach (var art in Model)
+        {
+            <div class="card col-sm-4" style="padding-top:2em;padding-bottom:2em">
+                <div class="card-body">
+                    <div class="card-text" style="text-align:center">
+                        @Html.DisplayFor(modelItem => art.title)
+                        <br>
+                        <pre>@Html.DisplayFor(modelItem => art.content)</pre>
+                    </div>
+                </div>
+                <div class="card-footer m-1" style="text-align: right;">
+                    - @Html.DisplayFor(modelItem => art.authorname)
+                </div>
+            </div>
+        }
+        </div>
+</div>

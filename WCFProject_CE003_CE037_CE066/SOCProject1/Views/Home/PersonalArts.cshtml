@@ -1,0 +1,27 @@
+﻿@model IEnumerable<SOCProject1.ArtsService.Art>
+
+<p>
+    @Html.ActionLink("Create New", "CreateArt")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.title)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.title)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditArt", new { id = item.artid }) |
+            @Html.ActionLink("Details", "ArtDetails", new { id = item.artid }) |
+            @Html.ActionLink("Delete", "DeleteArt", new { id = item.artid })
+        </td>
+    </tr>
+}
+
+</table>
